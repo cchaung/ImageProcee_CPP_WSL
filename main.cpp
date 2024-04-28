@@ -1,16 +1,16 @@
 #include <iostream>
-
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 #include <opencv2/core/core.hpp>
 
 using namespace cv;
 using namespace std;
+
 int main(int argc, char** argv)
 {
     cout << "start\n";
     // Read an image
-    Mat src = imread("HK416.png");
+    Mat src = imread("img/Beauty.jpg");
     if (src.empty()) {
         printf("could not open");
         return -1;
@@ -22,5 +22,8 @@ int main(int argc, char** argv)
     imshow("input", src); // Display the image in the "input" window
     waitKey(0); // Prevent the window from closing immediately, wait for user input
     destroyAllWindows(); // Destroy all windows
+
+
+    
     return 0;
 }
